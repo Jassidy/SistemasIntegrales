@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SistemasIntegrales.ViewModels.EnrollmentDateGroup>
+
+@{
+    ViewBag.Title = "Estadisticas de los Clientes";
+}
+
+<h2>Estadisticas de Clientes</h2>
+
+<table>
+    <tr>
+        <th>
+            Fecha de Registro
+        </th>
+        <th>
+            Clientes
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.NumClientes
+            </td>
+        </tr>
+    }
+</table>
